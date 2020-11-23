@@ -54,13 +54,14 @@ public class Post {
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(title + "/n");
+		sb.append(title + "\n");
 		sb.append(likes);
-		sb.append("Likes -");
-		sb.append(sdf.format(moment)+"/n");
-		sb.append(content + "/n");
+		sb.append(" Likes - ");
+		sb.append(sdf.format(moment)+"\n");
+		sb.append(content + "\n");
+		sb.append("Comments: \n");
 		for (comment c: comments) {
-			sb.append(c.getComment() + "/n");
+			sb.append(c.getComment() + "\n");
 		}
 		return sb.toString();
 	}
